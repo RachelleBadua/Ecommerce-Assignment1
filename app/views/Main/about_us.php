@@ -1,6 +1,6 @@
 <?php $this->view('shared/header', 'About us'); ?>
 	<h1>About us</h1>
-	<p>Cute dino</p>
+	<p>Sunset pictures, enjoy!</p>
 	<div class="content">
 		<div class="section1">
 			<img src="/images/sunset1.jpg" width="250px">

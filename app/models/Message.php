@@ -1,7 +1,7 @@
 <?php
-namespace app\models
+namespace app\models;
 
-define('MESSAGES_FILE', 'massages.txt');
+define('MESSAGES_FILE', 'resources/messages.txt');
 
 class Message{
 	public $message;
@@ -20,6 +20,4 @@ class Message{
 		fwrite($fh, "$message\n");
 		fclose($fh);
 	}
-
-
 }
