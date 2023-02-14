@@ -15,16 +15,16 @@ class App{
 		// checking if the requested controllwe is in controllers folder
 		if(file_exists('app/controllers/' . $request[0] . '.php')){
 			// gets the controller name
-			$contrller = $request[0];
+			$controller = $request[0];
 
 			// removes the $request[0] element
-			unset($request][0]);
+			unset($request[0]);
 		}
 		$controller = 'app\\controllers\\' . $controller;
 		$controller = new $controller;
 
 		// it checks if the class in the controller and the method exist  
-		if(isset($request[1]) & method_exists($controller, $request[1])){
+		if(isset($request[1]) && method_exists($controller, $request[1])){
 			// sets the value of $method to the method from the url
 			$method = $request[1];
 
@@ -42,5 +42,4 @@ class App{
 	function parseUrl($url){
 		return explode('/', trim($url, '/'));
 	}
-
 }
