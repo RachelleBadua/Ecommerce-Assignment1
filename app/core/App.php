@@ -39,6 +39,7 @@ class App{
 		call_user_func_array([$controller, $method], $params);
 	}
 
+	// it trims the url by the '/' and places the data in an array
 	function parseUrl($url){
 		return explode('/', trim($url, '/'));
 	}

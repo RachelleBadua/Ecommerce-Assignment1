@@ -3,13 +3,17 @@
 	<p>Wanna reach us? Write you email information and message in the following form and then submit</p>
 
 	<form method ="post" action="/Contact/create">
-		<label>Email:</label>
-		<input type="email" name="email">
+		<div class="form-group">
+			<label>Email:</label>
+			<input type="email" name="email" class="form-control"><br>
+		</div>
+		
+		<div class="form-group">
+			<label>Message:</label>
+			<textarea name="message" class="form-control"></textarea><br> 
+		</div>
 
-		<label>Message:</label>
-		<textarea name="message"></textarea> 
-
-		<input type="submit" name="action" value='Send!'>
+		<input type="submit" name="action" value='Send!' class="btn btn-primary">
 	</form>
 
 </body>

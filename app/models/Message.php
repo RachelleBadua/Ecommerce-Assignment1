@@ -8,11 +8,13 @@ class Message{
 	public $email;
 	public $IP;
 
+	// reads the txt file and places the object of message into an array and returns it
 	public function read(){
 		$contents = file(MESSAGES_FILE);
 		return $contents;
 	}
 
+	// writes to the txt file (encode ad json, open, lock, write, close)
 	public function write(){
 		$message = json_encode($this);
 		$fh = fopen(MESSAGES_FILE, 'a');

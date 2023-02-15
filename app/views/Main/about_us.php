@@ -1,15 +1,17 @@
 <?php $this->view('shared/header', 'About us'); ?>
-	<h1>About us</h1>
-	<p>Sunset pictures, enjoy!</p>
-	<div class="content">
-		<div class="section1">
-			<img src="/images/sunset1.jpg" width="250px">
-			<p>I like sunsets</p>
+		<h1>About us</h1>
+		<p>Sunset pictures, enjoy!</p>
+	
+		<div class="section">
+			<img src="/images/sunset1.jpg" width="400px">
+			<p class="d-flex align-items-center" id="caption">Sunset picture with a lower exposure</p>
 		</div>
 
-		<div class="section2">
-			<img src="/images/sunset2.jpg" width="250px">
-			<p>I like sunsets again</p>
+		<br>
+
+		<div class="section">
+			<img src="/images/sunset2.jpg" width="400px">
+			<p class="d-flex align-items-center" id="caption">Sunset picture with a higher exposure</p>
 		</div>
 		
 	</div>

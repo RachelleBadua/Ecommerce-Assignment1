@@ -1,0 +1,7 @@
+.section{
+	display: flex;
+}
+
+#caption{
+	padding: 20px;
+}
