@@ -6,8 +6,8 @@
 			<?php
 				foreach ($data as $message) { 
 				$obj = json_decode($message); ?>
-				<?= $obj->email ?? '' ?><br>
-				<?= $obj->message ?? '' ?><br><br>
+				<b><?= htmlentities($obj->email ?? ''); ?><br></b>
+				<?= htmlentities($obj->message ?? ''); ?><br><br>
 			<?php
 			}
 			?>

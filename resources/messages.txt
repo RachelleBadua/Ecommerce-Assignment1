@@ -1,4 +1,1 @@
-{"message":"I like cake!","email":"miso@hotmail.com","IP":"::1"}
-{"message":"I like your photos!","email":"cookie@outlook.com","IP":"::1"}
-{"message":"Bing chilling!","email":"mubeen@hotmail.com","IP":"::1"}
-{"message":"I love Nestea!","email":"mert@outlook.com","IP":"::1"}
+$count

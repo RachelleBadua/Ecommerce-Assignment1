@@ -1,7 +1,7 @@
 <?php
 namespace app\models;
 
-define('COUNTER_FILE', 'resources/messages.txt');
+define('COUNTER_FILE', 'resources/counter.txt');
 
 class Counter{
 	public $count;
@@ -11,16 +11,16 @@ class Counter{
 	// decodes the json 
 	// places results into property of count
 	function __construct(){
-		if(file_exists('/resources/counter.txt')){
+		if(file_exists(COUNTER_FILE)){
 			$fh = fopen(COUNTER_FILE, 'r');
 			flock($fh, LOCK_EX);
-			$count = file(COUNTER_FILE);
+			$count = fread($fh,1024);
 			fclose($fh);
 		}else{
-			$count = {"count":0};
+			$count = '{"count":0}';
 		}
 		$result = json_decode($count);
-		$this->count = $result;
+		$this->count = $result->count;
 	}
 
 	// increment count
@@ -33,13 +33,13 @@ class Counter{
 		$count = json_encode($this);
 		$fh = fopen(COUNTER_FILE, 'w');
 		flock($fh, LOCK_EX);
-		fwrite($fh, '$count');
+		fwrite($fh, $count);
 		fclose($fh);
 	}
 
 	// encodes this obj and return it
 	function __toString(){
 		$obj = json_encode($this);
-		return = $obj;
+		return $obj;
 	}
 }
